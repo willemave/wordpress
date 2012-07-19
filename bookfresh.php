@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Bookfresh
+Plugin Name: BookFresh
 Plugin URI: http://bookfresh.com
-Description: Bookfresh plugin for Wordpress
+Description: BookFresh plugin for Wordpress
 Version: 1.0
-Author: Bookfresh
+Author: BookFresh
 Author URI: http://bookfresh.com
 Text Domain: bookfresh.com
 */

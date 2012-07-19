@@ -33,13 +33,13 @@ if (!class_exists('BF_PluginMethods')) {
 
 		/* Callback to activation hook
 		 *
-		 * @return array $activation_hook - Runs the activation hook
+		 * @return array $activation_hook - Runs the deactivation hook
 		 */
 		public function bf_register_deactivation_hook($file, $function) {
 			return register_deactivation_hook( $file, $function );
 		}
 
-		/* Third-party enqueue style buffer
+		/* Callback to enqueue style
 		 *
 		 * @return array $style - Enqueues the stylesheet
 		 */
@@ -47,9 +47,9 @@ if (!class_exists('BF_PluginMethods')) {
 			return wp_enqueue_style($handle, $src, $deps, $ver, $media);
 		}
 
-		/* Third-party top menu page buffer
+		/* Callback for top menu page
 		 *
-		 * @return array $top_menu_page - Creates the top menu page for the correct application
+		 * @return array $top_menu_page
 		 */
 		public function bf_plugins_url($path, $plugin) {
 			return plugins_url($path, $plugin);
@@ -58,7 +58,7 @@ if (!class_exists('BF_PluginMethods')) {
 
 		/* Dashboard admin page
 		 *
-		 * @return string $page - The dashboard adming page HTML
+		 * @return string $page - The dashboard admin page HTML
 		 */
 		public function dashboard() {
 			$data = $this->GetOption('bf_account_settings');
