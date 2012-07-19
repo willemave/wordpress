@@ -1,4 +1,5 @@
 wordpress
 =========
 
-BF Wordpress Plugin
+BF Wordpress Plugin. 
+I can write to this file
