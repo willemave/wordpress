@@ -82,17 +82,23 @@ if (!class_exists('BF_PluginMethods')) {
 						</table>
 						<p class="submit"><input type="submit" name="createuser" id="createusersub" class="button-primary" value="Save"></p>
 					</form>
+					<p>Bookfresh Available ShortCdoes</p>
+					<ul>
+						<li>[bookfresh_widget_large]</li>
+						<li>[bookfresh_booknow_button]</li>
+					</ul>
 				</div>
 			<?php			
 		}
 
 		public function bf_widget_large(){
-			return '<!-- Start BookFresh Embed code --><div id="booking_widget_container" style="width: 490;">
-					<iframe src="http://bookfresh.local/index.html?view=booking_widget&id=38bfdbe327ad70de1442ff0154958da6" frameborder="0" 
-					name="BookFresh" width="490px" height="590px" id="booking_widget" border="0" style="border: none;" marginwidth="0" scrolling="no">
-					</iframe><div><span style="font-size: 10px; color: #88888b; font-family: Lucida Grande, Lucida,sans-serif;"><a href="http://bookfresh.local/" 
-					target="_blank" style="color: #88888b; text-decoration: underline;">online appointment software</a> - by BookFresh</span></div></div>
-					<!-- End BookFresh Embed code -->';
+			return '<!-- Start BookFresh Embed code -->
+					<div id="booking_widget_container" style="width: 490;">
+					<iframe src="http://www.bookfresh.com/index.html?view=booking_widget&id=a41d6009a88cbaf1638b52514daaf19b" frameborder="0" 
+					name="BookFresh" width="490px" height="590px" id="booking_widget" border="0" style="border: none;" marginwidth="0" scrolling="no"></iframe>
+					<div><span style="font-size: 10px; color: #88888b; font-family: Lucida Grande, Lucida,sans-serif;">
+					<a href="http://www.bookfresh.com/" target="_blank" style="color: #88888b; text-decoration: underline;">
+					appointment scheduling software</a> - by BookFresh</span></div></div><!-- End BookFresh Embed code -->';
 		}
 
 		public function bf_booknow_button(){
