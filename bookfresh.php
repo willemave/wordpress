@@ -26,7 +26,7 @@ if(!class_exists('BookFresh')){
 		 *
 		 */
 		public function plugin_activation() {
-			$this->CreateBookfreshTables();
+			//$this->CreateBookfreshTables();
 		}
 
 		/* Runs plugin deactivation routines
@@ -54,7 +54,14 @@ if(!class_exists('BookFresh')){
 		public function load_admin_styles() {						
 			$this->bf_enqueue_style('bf_admin', $this->bf_plugins_url('/css/admin-style.css', __FILE__));
 		}
-		
+
+		public function add_widget_large(){
+			return $this->bf_widget_large();
+		}
+
+		public function add_button_booknow(){
+			return $this->bf_booknow_button();
+		}
 
 	}
 
@@ -66,6 +73,10 @@ if(!class_exists('BookFresh')){
 
 	//Actions
 	$BFInstance->bf_add_action('admin_menu', array($BFInstance, 'admin_menus'), 10, '');
+
+	//Shortcodes
+	add_shortcode('bookfresh_widget_large', array($BFInstance, 'add_widget_large'));
+	add_shortcode('bookfresh_booknow_button', array($BFInstance, 'add_button_booknow'));
 
 	//Maybe put this into the plugin methods and add validation checking.
 	if($_POST['createuser'] == 'Save') {

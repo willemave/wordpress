@@ -85,6 +85,20 @@ if (!class_exists('BF_PluginMethods')) {
 				</div>
 			<?php			
 		}
+
+		public function bf_widget_large(){
+			return '<!-- Start BookFresh Embed code --><div id="booking_widget_container" style="width: 490;">
+					<iframe src="http://bookfresh.local/index.html?view=booking_widget&id=38bfdbe327ad70de1442ff0154958da6" frameborder="0" 
+					name="BookFresh" width="490px" height="590px" id="booking_widget" border="0" style="border: none;" marginwidth="0" scrolling="no">
+					</iframe><div><span style="font-size: 10px; color: #88888b; font-family: Lucida Grande, Lucida,sans-serif;"><a href="http://bookfresh.local/" 
+					target="_blank" style="color: #88888b; text-decoration: underline;">online appointment software</a> - by BookFresh</span></div></div>
+					<!-- End BookFresh Embed code -->';
+		}
+
+		public function bf_booknow_button(){
+			return '<a href="http://www.bookfresh.com/index.html?id=a41d6009a88cbaf1638b52514daaf19b&wi=3&view=button_dispatcher">
+					<img src="http://www.bookfresh.com/images/badge_ht_viewprofile.gif" border="0" alt="I offer online scheduling using BookFresh"></a>';
+		}
 	}
 }
 ?>

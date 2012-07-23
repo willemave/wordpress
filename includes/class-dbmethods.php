@@ -4,8 +4,8 @@ if (!class_exists('BF_DBMethods')) {
 	class BF_DBMethods {
 		public function __construct(){
 			global $wpdb;
-			$this->TablePrefix = $wpdb->prefix.'bf_';
-			$this->OptionsTable = $this->TablePrefix.'options';
+			// $this->TablePrefix = $wpdb->prefix.'bf_';
+			$this->OptionsTable = $wpdb->prefix.'options';
 			// $this->pluginDir  = dirname(__FILE__) . '/includes/class-pluginmethods.php'
 		 }
 
