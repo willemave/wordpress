@@ -66,7 +66,8 @@ if (!class_exists('BF_PluginMethods')) {
 				<div class="wrap">
 					<div id="icon-index" class="icon32"></div>
 					<h2>Dashboard</h2>
-					<p>BookFresh Account Settings</p>
+					<div id="bf_flash_message" style="display:none;"></div>
+					<h3>BookFresh Account Settings</h3>
 					<form action="" method="post" name="accountsettings" id="accountsettings">
 						<table class="form-table">
 							<tbody>
@@ -82,6 +83,8 @@ if (!class_exists('BF_PluginMethods')) {
 						</table>
 						<p class="submit"><input type="submit" name="createuser" id="createusersub" class="button-primary" value="Save"></p>
 					</form>
+					<p id="service_id"><b>BookFresh Service ID:</b> <?php echo $data['service_id']; ?></p>
+					<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?><p> <br/>
 					<p>Bookfresh Available ShortCdoes</p>
 					<ul>
 						<li>[bookfresh_widget_large]</li>
@@ -104,6 +107,10 @@ if (!class_exists('BF_PluginMethods')) {
 		public function bf_booknow_button(){
 			return '<a href="http://www.bookfresh.com/index.html?id=a41d6009a88cbaf1638b52514daaf19b&wi=3&view=button_dispatcher">
 					<img src="http://www.bookfresh.com/images/badge_ht_viewprofile.gif" border="0" alt="I offer online scheduling using BookFresh"></a>';
+		}
+
+		public function api_call() {
+			return json_encode();
 		}
 	}
 }

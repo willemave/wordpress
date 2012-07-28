@@ -63,27 +63,59 @@ if(!class_exists('BookFresh')){
 			return $this->bf_booknow_button();
 		}
 
+		public function load_js() {
+			if(is_admin()){
+				wp_enqueue_script('jquery-ui-core');
+				wp_enqueue_script('bf_admin_js', $this->bf_plugins_url('/js/bf_admin.js', __FILE__));
+				wp_localize_script('bf_ajax_call', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+				wp_localize_script('bf_admin_js', 'bf_nonce', array('nonce' => wp_create_nonce('bf_ajax-nonce')));
+				
+				// tempory path for jsonp sample call
+				wp_localize_script('bf_admin_js', 'jsonp', array( 'url' => $this->bf_plugins_url('/includes/json.php', __FILE__)));
+			}
+		}
+
+		public function bf_member(){
+			$nonce = $_POST['bf_nonce'];
+			// check to see if the submitted nonce matches with the
+		    // generated nonce we created earlier
+		    if (!wp_verify_nonce( $nonce, 'bf_ajax-nonce' )){
+		        die();
+			}
+
+			$data['email'] = $_POST['email'];
+			$data['password'] = $_POST['password'];
+			$data['service_id'] = $_POST['service_id'];
+			
+			$this->SaveOption('bf_account_settings', $data);
+			die();
+		}
+
 	}
 
 	$BFInstance = new Bookfresh();
 	
 	//Hooks
-	$BFInstance->bf_register_activation_hook( __FILE__, array( $BFInstance, 'plugin_activation' ) );
-	$BFInstance->bf_register_deactivation_hook( __FILE__, array( $BFInstance, 'plugin_deactivation' ) );
+	$BFInstance->bf_register_activation_hook( __FILE__, array($BFInstance, 'plugin_activation' ));
+	$BFInstance->bf_register_deactivation_hook( __FILE__, array($BFInstance, 'plugin_deactivation'));
 
 	//Actions
+	$BFInstance->bf_add_action('init', array($BFInstance, 'load_js'));
+	$BFInstance->bf_add_action('wp_ajax_bf_member', array($BFInstance, 'bf_member'));
 	$BFInstance->bf_add_action('admin_menu', array($BFInstance, 'admin_menus'), 10, '');
+
 
 	//Shortcodes
 	add_shortcode('bookfresh_widget_large', array($BFInstance, 'add_widget_large'));
 	add_shortcode('bookfresh_booknow_button', array($BFInstance, 'add_button_booknow'));
 
-	//Maybe put this into the plugin methods and add validation checking.
-	if($_POST['createuser'] == 'Save') {
-		$data['email'] = $_POST['email'];
-		$data['password'] = $_POST['password'];
 
-		$BFInstance->SaveOption('bf_account_settings', $data);
-	}
+	//Maybe put this into the plugin methods and add validation checking.
+	// if($_POST['createuser'] == 'Save') {
+	// 	$data['email'] = $_POST['email'];
+	// 	$data['password'] = $_POST['password'];
+
+	// 	$BFInstance->SaveOption('bf_account_settings', $data);
+	// }
 }
 ?>
