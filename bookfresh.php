@@ -67,7 +67,7 @@ if(!class_exists('BookFresh')){
 			if(is_admin()){
 				wp_enqueue_script('jquery-ui-core');
 				wp_enqueue_script('bf_admin_js', $this->bf_plugins_url('/js/bf_admin.js', __FILE__));
-				wp_localize_script('bf_ajax_call', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+				wp_localize_script('bf_admin_js', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
 				wp_localize_script('bf_admin_js', 'bf_nonce', array('nonce' => wp_create_nonce('bf_ajax-nonce')));
 				
 				// tempory path for jsonp sample call
