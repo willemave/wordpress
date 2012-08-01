@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		var email = $(this).find( 'input[name="email"]').val();
 		var password = $(this).find( 'input[name="password"]').val();
-		var url = 'http://peter.sandbox.boofresh.com/cindex.php/account/ajax?callback=?'; 
+		var url = 'http://peter.sandbox.bookfresh.com/cindex.php/account/ajax?callback=?'; 
 		var service_id;
 
 		if(email.length == 0 || password.length == 0) {
