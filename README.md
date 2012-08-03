@@ -10,7 +10,7 @@ Installation
 
 API URL
 ==========================================================
-By default the plugin will save the default API URL. you can ovveride it using the APU URL field.
+Override the default API URL using the API URL field.
 
 Short Codes
 ==========================================================
