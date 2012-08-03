@@ -62,6 +62,7 @@ if (!class_exists('BF_PluginMethods')) {
 		 */
 		public function dashboard() {
 			$data = $this->GetOption('bf_account_settings');
+			$api_url = $this->GetOption('bf_api_url');
 			?>
 				<div class="wrap">
 					<div id="icon-index" class="icon32"></div>
@@ -77,7 +78,7 @@ if (!class_exists('BF_PluginMethods')) {
 								</tr>
 								<tr class="form-field">
 									<th scope="row"><label for="password">Password: </label></th>
-									<td><input name="password" type="text" id="password" value="<?php echo $data['password']; ?>"></td>
+									<td><input name="password" type="password" id="password" value="<?php echo $data['password']; ?>"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -85,7 +86,11 @@ if (!class_exists('BF_PluginMethods')) {
 					</form>
 					<p id="service_id"><b>BookFresh Service ID:</b> <?php echo $data['service_id']; ?></p>
 					<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?><p> <br/>
-					<p>Bookfresh Available ShortCdoes</p>
+					<p class="bf-label">
+						<label for="api_url">API URL:<input type="text" id="api_url" name="api_url" value="<?php echo $api_url; ?>"/></label>
+						<a href="#" id="api_url_action">Update</a>
+					</p>
+					<p>Bookfresh Available Short Codes</p>
 					<ul>
 						<li>[bookfresh_widget_large]</li>
 						<li>[bookfresh_booknow_button]</li>

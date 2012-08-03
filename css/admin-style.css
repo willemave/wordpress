@@ -1,3 +1,16 @@
 #accountsettings .form-field input {
 	width: 25em;
 }
+
+#accountsettings .form-field label.error {
+	color: #FB3A3A;
+}
+
+.bf-label input{
+	margin-left: 10px;
+	width: 25em;
+}
+
+.bf-label a {
+	text-decoration: none;
+}
