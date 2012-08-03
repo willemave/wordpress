@@ -17,9 +17,7 @@ Short Codes
 Usage: Copy and Paste ShortCodes value to Post or Page.
 
 Widget Large IFrame:
-------------
 [bookfresh_widget_large] 
 
 Book Now Button:
-------------
 [bookfresh_booknow_button]
