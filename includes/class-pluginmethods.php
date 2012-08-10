@@ -86,10 +86,6 @@ if (!class_exists('BF_PluginMethods')) {
 					</form>
 					<p id="service_id"><b>BookFresh Service ID:</b> <?php echo $data['service_id']; ?></p>
 					<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?><p> <br/>
-					<p class="bf-label">
-						<label for="api_url">API URL:<input type="text" id="api_url" name="api_url" value="<?php echo $api_url; ?>"/></label>
-						<a href="#" id="api_url_action">Update</a>
-					</p>
 					<p>Bookfresh Available Short Codes</p>
 					<ul>
 						<li>[bookfresh_widget_large]</li>

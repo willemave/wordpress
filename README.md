@@ -7,11 +7,6 @@ Installation
 2. Activate the Plugin.
 3. Input your Bookfresh username/email and password. This will be validated thru BookFresh API and returns ServiceID base on the login information.
 
-
-API URL
--------
-Override the default API URL using the API URL field.
-
 Short Codes
 ------------
 Usage: Copy and Paste ShortCodes value to Post or Page.

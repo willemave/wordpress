@@ -70,6 +70,7 @@ if(!class_exists('BookFresh')){
 				if(!$api_url) {
 					$this->SaveOption('bf_api_url', 'http://bookfresh.com/cindex.php/account/ajax');
 				}
+				
 				wp_enqueue_script('jquery-ui-core');
 				wp_enqueue_script('jquery-validate','http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js');
 				wp_enqueue_script('bf_admin_js', $this->bf_plugins_url('/js/bf_admin.js', __FILE__));
@@ -97,19 +98,6 @@ if(!class_exists('BookFresh')){
 			$this->SaveOption('bf_account_settings', $data);
 			die();
 		}
-
-		public function bf_api_url(){
-			$nonce = $_POST['bf_nonce'];
-
-		    if (!wp_verify_nonce( $nonce, 'bf_ajax-nonce' )){
-		        die();
-			}
-
-			$result = $this->SaveOption('bf_api_url', $_POST['api_url']);
-			echo $result;
-			die();
-		}
-
 	}
 
 	$BFInstance = new Bookfresh();
@@ -121,7 +109,6 @@ if(!class_exists('BookFresh')){
 	//Actions
 	$BFInstance->bf_add_action('init', array($BFInstance, 'load_js'));
 	$BFInstance->bf_add_action('wp_ajax_bf_member', array($BFInstance, 'bf_member'));
-	$BFInstance->bf_add_action('wp_ajax_bf_api_url', array($BFInstance, 'bf_api_url'));
 	$BFInstance->bf_add_action('admin_menu', array($BFInstance, 'admin_menus'), 10, '');
 
 

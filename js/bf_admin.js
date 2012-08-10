@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
     	$("#bf_flash_message").show().fadeIn('slow', function(){
     		$(this).empty();
     		$(this).append(message);
-    		if(type == 'sucess') {
+    		if(type == 'success') {
     			$(this).css('background-color', '#FFFBCC');
 				$(this).css('color', '#000');
     		} else {
