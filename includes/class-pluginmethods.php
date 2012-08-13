@@ -62,7 +62,6 @@ if (!class_exists('BF_PluginMethods')) {
 		 */
 		public function dashboard() {
 			$data = $this->GetOption('bf_account_settings');
-			$api_url = $this->GetOption('bf_api_url');
 			?>
 				<div class="wrap">
 					<div id="icon-index" class="icon32"></div>
@@ -74,15 +73,15 @@ if (!class_exists('BF_PluginMethods')) {
 							<tbody>
 								<tr class="form-field">
 									<th scope="row"><label for="email">E-mail: </label></th>
-									<td><input name="email" type="text" id="email" value="<?php echo $data['email']; ?>"></td>
+									<td><input name="email" type="text" id="email"></td>
 								</tr>
 								<tr class="form-field">
 									<th scope="row"><label for="password">Password: </label></th>
-									<td><input name="password" type="password" id="password" value="<?php echo $data['password']; ?>"></td>
+									<td><input name="password" type="password" id="password"></td>
 								</tr>
 							</tbody>
 						</table>
-						<p class="submit"><input type="submit" name="createuser" id="createusersub" class="button-primary" value="Save"></p>
+						<p class="submit"><input type="submit" name="createuser" id="createusersub" class="button-primary" value="Login"></p>
 					</form>
 					<p id="service_id"><b>BookFresh Service ID:</b> <?php echo $data['service_id']; ?></p>
 					<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?><p> <br/>
@@ -96,18 +95,24 @@ if (!class_exists('BF_PluginMethods')) {
 		}
 
 		public function bf_widget_large(){
+			global $ISDEV; 
+			$url = $ISDEV === false ? BF_LIVE_URL : BF_DEV_URL;
+			$data = $this->GetOption('bf_account_settings');
 			return '<!-- Start BookFresh Embed code -->
 					<div id="booking_widget_container" style="width: 490;">
-					<iframe src="http://www.bookfresh.com/index.html?view=booking_widget&id=a41d6009a88cbaf1638b52514daaf19b" frameborder="0" 
+					<iframe src="'.$url.'/index.html?view=booking_widget&id='.$data['service_id'].'" frameborder="0" 
 					name="BookFresh" width="490px" height="590px" id="booking_widget" border="0" style="border: none;" marginwidth="0" scrolling="no"></iframe>
 					<div><span style="font-size: 10px; color: #88888b; font-family: Lucida Grande, Lucida,sans-serif;">
-					<a href="http://www.bookfresh.com/" target="_blank" style="color: #88888b; text-decoration: underline;">
+					<a href="'.$url.'" target="_blank" style="color: #88888b; text-decoration: underline;">
 					appointment scheduling software</a> - by BookFresh</span></div></div><!-- End BookFresh Embed code -->';
 		}
 
 		public function bf_booknow_button(){
-			return '<a href="http://www.bookfresh.com/index.html?id=a41d6009a88cbaf1638b52514daaf19b&wi=3&view=button_dispatcher">
-					<img src="http://www.bookfresh.com/images/badge_ht_viewprofile.gif" border="0" alt="I offer online scheduling using BookFresh"></a>';
+			global $ISDEV; 
+			$url = $ISDEV === false ? BF_LIVE_URL : BF_DEV_URL;
+			$data = $this->GetOption('bf_account_settings');
+			return '<a href="'.$url.'/index.html?id='.$data['service_id'].'&wi=3&view=button_dispatcher">
+					<img src="'.$url.'/images/badge_ht_viewprofile.gif" border="0" alt="I offer online scheduling using BookFresh"></a>';
 		}
 
 		public function api_call() {

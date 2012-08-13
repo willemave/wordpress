@@ -13,6 +13,7 @@ Text Domain: bookfresh.com
 require_once( dirname(__FILE__) . '/includes/class-dbmethods.php' );
 require_once( dirname(__FILE__) . '/includes/class-pluginmethods.php' );
 require_once( dirname(__FILE__) . '/admin/settings.php' );
+require_once( dirname(__FILE__) . '/bf-config.php' );
 
 if(!class_exists('BookFresh')){
 
@@ -64,13 +65,9 @@ if(!class_exists('BookFresh')){
 		}
 
 		public function load_js() {
+			global $ISDEV; 
 			if(is_admin()){
-				$api_url = $this->GetOption('bf_api_url');
-
-				if(!$api_url) {
-					$this->SaveOption('bf_api_url', 'http://bookfresh.com/cindex.php/account/ajax');
-				}
-				
+				$api_url = $ISDEV === false ? BF_LIVE_URL : BF_DEV_URL;
 				wp_enqueue_script('jquery-ui-core');
 				wp_enqueue_script('jquery-validate','http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js');
 				wp_enqueue_script('bf_admin_js', $this->bf_plugins_url('/js/bf_admin.js', __FILE__));
@@ -92,7 +89,6 @@ if(!class_exists('BookFresh')){
 			}
 
 			$data['email'] = $_POST['email'];
-			$data['password'] = $_POST['password'];
 			$data['service_id'] = $_POST['service_id'];
 			
 			$this->SaveOption('bf_account_settings', $data);
