@@ -9,7 +9,7 @@ Installation
 
 API Configuration
 -----------------
-If your using a test environment, Define a API url value for BF_DEV_URL and set $ISDEV global variable to true
+If your using a test environment, Update the API url value of bf-config.php
 
 Short Codes
 -----------

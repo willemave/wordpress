@@ -65,15 +65,13 @@ if(!class_exists('BookFresh')){
 		}
 
 		public function load_js() {
-			global $ISDEV; 
 			if(is_admin()){
-				$api_url = $ISDEV === false ? BF_LIVE_URL : BF_DEV_URL;
 				wp_enqueue_script('jquery-ui-core');
 				wp_enqueue_script('jquery-validate','http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js');
 				wp_enqueue_script('bf_admin_js', $this->bf_plugins_url('/js/bf_admin.js', __FILE__));
 				wp_localize_script('bf_admin_js', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
 				wp_localize_script('bf_admin_js', 'bf_nonce', array('nonce' => wp_create_nonce('bf_ajax-nonce')));
-				wp_localize_script('bf_admin_js', 'bf_api_url', array('url' => $api_url));
+				wp_localize_script('bf_admin_js', 'bf_api_url', array('url' => BF_API_URL));
 				
 				// tempory path for jsonp sample call
 				wp_localize_script('bf_admin_js', 'jsonp', array( 'url' => $this->bf_plugins_url('/includes/json.php', __FILE__)));

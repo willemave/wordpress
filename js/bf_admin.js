@@ -42,7 +42,8 @@ jQuery(document).ready(function($) {
                     flash_message(service.message, 'error');
                 }
             })
-            return false;    
+            .error(function() { flash_message('Something went wrong, Can\'t connect to Server. Please try again', 'error'); })
+            return false;
         }
     });
 
