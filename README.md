@@ -6,8 +6,8 @@ Installation
 ------------
 To get started:
 1) Click the "Activate" link to the left of this description, 
-2) Sign up for a [BookFresh Account [http://www.bookfresh.com/pricing/]] and 
-3) Go to your BookFresh [configuration page[http-page for plugin]], and save login information
+2) Sign up for a [BookFresh Account](http://www.bookfresh.com/pricing/, "SignUp") and 
+3) Go to your BookFresh configuration page, and save login information
 
 API Configuration
 -----------------
