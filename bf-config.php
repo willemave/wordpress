@@ -6,5 +6,5 @@
 #	Modify Url for API Call.
 #
 # ==========================================================================================
-define('BF_API_URL', 'http://bookfresh.com');
+define('BF_API_URL', 'http://bookfresh.local');
 ?>

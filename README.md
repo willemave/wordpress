@@ -1,11 +1,13 @@
 BookFresh Wordpress Plugin
 ==========================
+BookFresh is the premier online schedule and appointment solution!
 
 Installation
 ------------
-1. Upload Plugin zip file or extracted folder using the WP Plugin Manager.
-2. Activate the Plugin.
-3. Input your Bookfresh username/email and password. This will be validated thru BookFresh API and returns ServiceID base on the login information.
+To get started:
+1) Click the "Activate" link to the left of this description, 
+2) Sign up for a [BookFresh Account [http://www.bookfresh.com/pricing/]] and 
+3) Go to your BookFresh [configuration page[http-page for plugin]], and save login information
 
 API Configuration
 -----------------

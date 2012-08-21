@@ -14,3 +14,81 @@
 .bf-label a {
 	text-decoration: none;
 }
+
+#bf-left-container {
+	border-right: 1px solid black;
+	float:left;
+	width:510px;
+}
+
+#bf-fieldset {
+	margin-top: 30px;
+}
+
+#bf-fieldset legend {
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+}
+
+#bf-fieldset form {
+	padding-top: 20px;
+	padding-left: 15px;
+}
+
+#bf-fieldset ul, #bf-fieldset li{
+	border:0; 
+	margin:0; 
+	padding:0; 
+	list-style:none;
+}
+#bf-fieldset li{
+	clear:both;
+	list-style:none;
+	padding-bottom:10px;
+}
+
+#bf-fieldset input{
+	width: 300px;
+}
+
+#bf-fieldset label{
+	width:100px;
+	float:left;
+}
+
+#bf-shortcodes {
+	padding-left: 15px;
+}
+
+#bf-side{
+	float:left;
+	width: 500px;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+#bf-side li {
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+#bf-side ul span {
+	font-size: 20px;
+}
+
+#bf-container {
+	width:100%;
+}
+
+#shortcode-images li {
+	display: inline;
+	margin-left: 4px;
+}
+
+#shortcode-images img {
+	padding-right: 20px;
+}
+
+#shortcode-images li img {
+	padding-top: 20px;
+}

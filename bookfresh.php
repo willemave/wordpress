@@ -41,7 +41,7 @@ if(!class_exists('BookFresh')){
 		 *
 		 */
 		public function admin_menus() {
-			$page = $this->bf_add_menu_page('BookFresh', 'BookFresh', 8, 'bookfresh', array($this, 'create_menus'), '');
+			$page = $this->bf_add_menu_page('BookFresh', 'BookFresh', 8, 'bookfresh', array($this, 'create_menus'), $this->bf_plugins_url('/images/logo-icon.png', __FILE__));
 			$this->bf_add_action('admin_print_styles-' . $page, array($this, 'load_admin_styles'), 10, '');
 		}
 

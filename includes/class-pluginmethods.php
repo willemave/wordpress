@@ -63,33 +63,56 @@ if (!class_exists('BF_PluginMethods')) {
 		public function dashboard() {
 			$data = $this->GetOption('bf_account_settings');
 			?>
-				<div class="wrap">
-					<div id="icon-index" class="icon32"></div>
-					<h2>Dashboard</h2>
+				<div id="icon-index" class="icon32"></div>
+				<h2>BookFresh</h2>
+				<div id="bf-container">
 					<div id="bf_flash_message" style="display:none;"></div>
-					<h3>BookFresh Account Settings</h3>
-					<form action="" method="post" name="accountsettings" id="accountsettings">
-						<table class="form-table">
-							<tbody>
-								<tr class="form-field">
-									<th scope="row"><label for="email">E-mail: </label></th>
-									<td><input name="email" type="text" id="email"></td>
-								</tr>
-								<tr class="form-field">
-									<th scope="row"><label for="password">Password: </label></th>
-									<td><input name="password" type="password" id="password"></td>
-								</tr>
-							</tbody>
-						</table>
-						<p class="submit"><input type="submit" name="createuser" id="createusersub" class="button-primary" value="Login"></p>
-					</form>
-					<p id="service_id"><b>BookFresh Service ID:</b> <?php echo $data['service_id']; ?></p>
-					<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?><p> <br/>
-					<p>Bookfresh Available Short Codes</p>
-					<ul>
-						<li>[bookfresh_widget_large]</li>
-						<li>[bookfresh_booknow_button]</li>
-					</ul>
+					<div id="bf-left-container">
+						<fieldset id="bf-fieldset">
+							<legend>BookFresh Account Login</legend>
+							<form action="" method="post" name="accountsettings" id="accountsettings">
+								<ul>
+									<li>
+										<label for="email">E-mail: </label>
+										<input name="email" type="text" id="email"/>
+									</li>
+									<li>
+										<label for="password">Password: </label>
+										<input name="password" type="password" id="password"/>
+									</li>
+									<li>
+										<button type="submit" name="createuser" id="createusersub" class="button-primary">Login</button></p>
+									</li>
+								</ul>
+							</form>
+							<h3>Linked Account Info</h3>
+							<div id="bf-shortcodes">
+								<p id="service_id"><b>BookFresh Service ID:</b> <?php echo $data['service_id']; ?></p>
+								<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?><p> <br/>
+								<p>Bookfresh Available Short Codes</p>
+								<ul>
+									<li>[bookfresh_widget_large]</li>
+									<li>[bookfresh_booknow_button]</li>
+								</ul>
+							</div>
+						</fieldset>
+					</div>
+					<div id="bf-side">
+						<ul>
+							<li><span>Step 1:</span> <a href="http://www.bookfresh.com/pricing/">Signup with Bookfresh!</a></li>
+							<li><span>Step 2:</span> Type your Email and Password into the WordPress Plugin to the left</li>
+							<li><span>Step 3:</span> Pick and use a ShortCode anywhere in your Site!</li>
+						</ul>
+						<ul id="shortcode-images">
+							<li><a href="#">bookfresh_widget_large</a></li>
+							<li><a href="#">bookfresh_widget_small</a></li>
+							<li><a href="#">bookfresh_booknow_button</a></li>
+							<li><img src="<?php echo $this->bf_plugins_url('/images/widget.png', dirname(__FILE__)); ?>" alt="bookfresh_widget_large"/></li>
+							<li><img src="<?php echo $this->bf_plugins_url('/images/mini_widget.png', dirname(__FILE__)); ?>" alt="bookfresh_widget_small"/></li>
+							<li><img src="<?php echo $this->bf_plugins_url('/images/booknow_button.gif', dirname(__FILE__)); ?>" alt="bookfresh_booknow_button"/></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
 				</div>
 			<?php			
 		}
