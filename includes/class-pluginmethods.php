@@ -99,18 +99,22 @@ if (!class_exists('BF_PluginMethods')) {
 					</div>
 					<div id="bf-side">
 						<ul>
-							<li><span>Step 1:</span> <a href="http://www.bookfresh.com/pricing/">Signup with Bookfresh!</a></li>
+							<li><span>Step 1:</span> <a href="http://www.bookfresh.com/pricing/" target="_blank">Signup with Bookfresh!</a></li>
 							<li><span>Step 2:</span> Type your Email and Password into the WordPress Plugin to the left</li>
 							<li><span>Step 3:</span> Pick and use a ShortCode anywhere in your Site!</li>
 						</ul>
-						<ul id="shortcode-images">
-							<li><a href="#">bookfresh_widget_large</a></li>
-							<li><a href="#">bookfresh_widget_small</a></li>
-							<li><a href="#">bookfresh_booknow_button</a></li>
-							<li><img src="<?php echo $this->bf_plugins_url('/images/widget.png', dirname(__FILE__)); ?>" alt="bookfresh_widget_large"/></li>
-							<li><img src="<?php echo $this->bf_plugins_url('/images/mini_widget.png', dirname(__FILE__)); ?>" alt="bookfresh_widget_small"/></li>
-							<li><img src="<?php echo $this->bf_plugins_url('/images/booknow_button.gif', dirname(__FILE__)); ?>" alt="bookfresh_booknow_button"/></li>
-						</ul>
+						<div id="widget_large" class="widgets_info">
+							<a href="#">bookfresh_widget_large</a>
+							<img src="<?php echo $this->bf_plugins_url('/images/widget.png', dirname(__FILE__)); ?>" alt="bookfresh_widget_large"/>
+						</div>
+						<div id="mini_widget" class="widgets_info">
+							<a href="#">bookfresh_widget_small</a>
+							<img src="<?php echo $this->bf_plugins_url('/images/mini_widget.png', dirname(__FILE__)); ?>" alt="bookfresh_widget_small"/>
+						</div>
+						<div id="button_widget" class="widgets_info">
+							<a href="#">bookfresh_booknow_button</a>
+							<img src="<?php echo $this->bf_plugins_url('/images/booknow_button.gif', dirname(__FILE__)); ?>" alt="bookfresh_booknow_button"/>
+						</div>
 					</div>
 					<div class="clear"></div>
 				</div>
