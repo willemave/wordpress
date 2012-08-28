@@ -143,11 +143,11 @@ if (!class_exists('BF_PluginMethods')) {
 		public function bf_widget_small() {
 			return '<!-- Start BookFresh Embed code -->
 					<div id="mini_widget_container" style="width: 160;">
-					<iframe src="http://bookfresh.local/index.html?view=mini_widget&id='.$this->settings['service_id'].'" frameborder="0" name="BookFresh" width="160px" height="300px" id="mini_widget" border="0" scrolling="no" style="border: none;" marginwidth="0">
+					<iframe src="'.BF_API_URL.'/index.html?view=mini_widget&id='.$this->settings['service_id'].'" frameborder="0" name="BookFresh" width="160px" height="300px" id="mini_widget" border="0" scrolling="no" style="border: none;" marginwidth="0">
 					</iframe>
 					<div>
 					<span style="font-size: 10px; color: #88888b; font-family: Lucida Grande, Lucida,sans-serif;">
-					<a href="http://bookfresh.local/" target="_blank" style="color: #88888b; text-decoration: underline;">online appointment</a> - by BookFresh
+					<a href="'.BF_API_URL.'" target="_blank" style="color: #88888b; text-decoration: underline;">online appointment</a> - by BookFresh
 					</span>
 					</div>
 					</div><!-- End BookFresh Embed code -->';
