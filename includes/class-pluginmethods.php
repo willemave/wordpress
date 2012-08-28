@@ -3,8 +3,11 @@ if (!class_exists('BF_PluginMethods')) {
 
 	class BF_PluginMethods extends BF_DBMethods {
 
+		private $settings;
+
 		public function __construct(){
 			parent::__construct();
+			$this->settings = $this->GetOption('bf_account_settings');
 		}
 
 		/* Callback to add_action function
@@ -92,6 +95,7 @@ if (!class_exists('BF_PluginMethods')) {
 								<p>Bookfresh Available Short Codes</p>
 								<ul>
 									<li>[bookfresh_widget_large]</li>
+									<li>[bookfresh_widget_small]</li>
 									<li>[bookfresh_booknow_button]</li>
 								</ul>
 							</div>
@@ -122,10 +126,9 @@ if (!class_exists('BF_PluginMethods')) {
 		}
 
 		public function bf_widget_large(){
-			$data = $this->GetOption('bf_account_settings');
 			return '<!-- Start BookFresh Embed code -->
 					<div id="booking_widget_container" style="width: 490;">
-					<iframe src="'.BF_API_URL.'/index.html?view=booking_widget&id='.$data['service_id'].'" frameborder="0" 
+					<iframe src="'.BF_API_URL.'/index.html?view=booking_widget&id='.$this->settings['service_id'].'" frameborder="0" 
 					name="BookFresh" width="490px" height="590px" id="booking_widget" border="0" style="border: none;" marginwidth="0" scrolling="no"></iframe>
 					<div><span style="font-size: 10px; color: #88888b; font-family: Lucida Grande, Lucida,sans-serif;">
 					<a href="'.BF_API_URL.'" target="_blank" style="color: #88888b; text-decoration: underline;">
@@ -133,9 +136,21 @@ if (!class_exists('BF_PluginMethods')) {
 		}
 
 		public function bf_booknow_button(){
-			$data = $this->GetOption('bf_account_settings');
-			return '<a href="'.BF_API_URL.'/index.html?id='.$data['service_id'].'&wi=3&view=button_dispatcher">
+			return '<a href="'.BF_API_URL.'/index.html?id='.$this->settings['service_id'].'&wi=3&view=button_dispatcher">
 					<img src="'.BF_API_URL.'/images/badge_ht_viewprofile.gif" border="0" alt="I offer online scheduling using BookFresh"></a>';
+		}
+
+		public function bf_widget_small() {
+			return '<!-- Start BookFresh Embed code -->
+					<div id="mini_widget_container" style="width: 160;">
+					<iframe src="http://bookfresh.local/index.html?view=mini_widget&id='.$this->settings['service_id'].'" frameborder="0" name="BookFresh" width="160px" height="300px" id="mini_widget" border="0" scrolling="no" style="border: none;" marginwidth="0">
+					</iframe>
+					<div>
+					<span style="font-size: 10px; color: #88888b; font-family: Lucida Grande, Lucida,sans-serif;">
+					<a href="http://bookfresh.local/" target="_blank" style="color: #88888b; text-decoration: underline;">online appointment</a> - by BookFresh
+					</span>
+					</div>
+					</div><!-- End BookFresh Embed code -->';
 		}
 
 		public function api_call() {

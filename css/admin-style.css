@@ -18,7 +18,7 @@
 #bf-left-container {
 	border-right: 1px solid black;
 	float:left;
-	width:510px;
+	width:500px;
 }
 
 #bf-fieldset {
@@ -63,7 +63,6 @@
 
 #bf-side{
 	float:left;
-	width: 650px;
 	margin-left: 30px;
 	margin-top: 20px;
 }
@@ -104,19 +103,19 @@
 
 #widget_large {
 	margin-right: 10px;
-	width: 250px;
+	width: 200px;
 }
 
 #mini_widget {
 	margin-left: 10px;
-	width: 200px;
+	width: 150px;
 }
 
 #mini_widget a {
-	padding-left: 20px;
+	padding-left: 15px;
 }
 
 #button_widget {
-	margin-left: 10px;
+	margin-left: 20px;
 	width: 100px;
 }

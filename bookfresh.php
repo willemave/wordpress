@@ -60,6 +60,10 @@ if(!class_exists('BookFresh')){
 			return $this->bf_widget_large();
 		}
 
+		public function add_widget_small(){
+			return $this->bf_widget_small();
+		}
+
 		public function add_button_booknow(){
 			return $this->bf_booknow_button();
 		}
@@ -108,6 +112,8 @@ if(!class_exists('BookFresh')){
 
 	//Shortcodes
 	add_shortcode('bookfresh_widget_large', array($BFInstance, 'add_widget_large'));
+	add_shortcode('bookfresh_widget_small', array($BFInstance, 'add_widget_small'));
 	add_shortcode('bookfresh_booknow_button', array($BFInstance, 'add_button_booknow'));
+	
 }
 ?>
