@@ -9,6 +9,11 @@ Author URI: http://www.bookfresh.com
 Text Domain: www.bookfresh.com
 */
 
+/*  Copyright 2012  Willem Ave (email : support@bookfresh.com)
+    Commercial license please review http://www.bookfresh.com/security/terms-of-use
+*/
+
+
 
 require_once( dirname(__FILE__) . '/includes/class-dbmethods.php' );
 require_once( dirname(__FILE__) . '/includes/class-pluginmethods.php' );
