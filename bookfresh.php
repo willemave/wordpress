@@ -2,12 +2,17 @@
 /*
 Plugin Name: BookFresh
 Plugin URI: http://bookfresh.com
-Description: BookFresh plugin for Wordpress
+Description: 1. Click the "Activate" link to the left  2. Sign up for a <a href="https://www.bookfresh.com/pricing/" target="_blank">BookFresh Account</a> 3. Go to your Wordpress BookFresh Plugin configuration page, and save login information.
 Version: 1.0
 Author: BookFresh
-Author URI: http://bookfresh.com
-Text Domain: bookfresh.com
+Author URI: http://www.bookfresh.com
+Text Domain: www.bookfresh.com
 */
+
+/*  Copyright 2012  Willem Ave (email : support@bookfresh.com)
+    Commercial license please review http://www.bookfresh.com/security/terms-of-use
+*/
+
 
 
 require_once( dirname(__FILE__) . '/includes/class-dbmethods.php' );

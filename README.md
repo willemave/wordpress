@@ -4,15 +4,27 @@ BookFresh is the premier online schedule and appointment solution!
 
 Installation
 ------------
-To get started:
 
-1. Click the "Activate" link to the left of this description,
-2. Sign up for a [BookFresh Account](http://www.bookfresh.com/pricing/, "SignUp") and
-3. Go to your BookFresh configuration page, and save login information.
+### Installation via the Plugin Manager directly ###
 
-API Configuration
------------------
-If your using a test environment, Update the API url value of bf-config.php
+1. Goto 'Plugins' menu in WordPress
+1. Goto 'Add New'
+1. Search for "BookFresh"
+
+### Installation via uploading the zipfile into WordPress ###
+
+1. Download the zipfile 
+1. Goto 'Plugins' menu in WordPress
+1. Goto 'Add New'
+1. Click 'Upload' below the Installed Plugins menu
+1. Choose the zipfile you downloaded and click 'Install Now'
+1. Activate the plugin through the 'Plugins' menu in WordPress
+
+### Install via manual upload (FTP/SSH/etc) ###
+
+1. Download and extract the zipfile
+1. Upload the resultant directory to the `/wp-content/plugins/` directory
+1. Activate the plugin through the 'Plugins' menu in WordPress
 
 Short Codes
 -----------
@@ -20,6 +32,9 @@ Usage: Copy and Paste ShortCodes value to Post or Page.
 
 Widget Large IFrame:
 [bookfresh_widget_large] 
+
+Widget Large IFrame:
+[bookfresh_widget_small] 
 
 Book Now Button:
 [bookfresh_booknow_button]
