@@ -4,7 +4,7 @@ Donate link: http://www.bookfesh.com
 Tags: 
 Requires at least: 2.0.2
 Tested up to: 2.1
-License: Commercial
+License: GPLv2, Commercial
 License URI: http://www.bookfresh.com/security/terms-of-use
 
 Book appointments directly from your WordPress site! Use BookFresh to manage your business, reduce no shows, synchronize external calendars and more!
