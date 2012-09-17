@@ -73,7 +73,7 @@ jQuery(document).ready(function($) {
                 $(this).css('color', '#ffffff');
             }
         })
-        .fadeOut(5000, function(){
+        .fadeOut(3000, function(){
              location.reload();
         });
     }
