@@ -84,15 +84,16 @@ if (!class_exists('BF_PluginMethods')) {
 										<input name="password" type="password" id="password"/>
 									</li>
 									<li>
-										<button type="submit" name="createuser" id="createusersub" class="button-primary">Login</button></p>
+										<button type="submit" name="createuser" id="createusersub" class="button-primary">Login</button>
 									</li>
 								</ul>
 							</form>
 							<h3>Linked Account Info</h3>
 							<div id="bf-shortcodes">
 								<p id="service_id"><b>BookFresh Service ID:</b> <?php echo $data['service_id']; ?></p>
-								<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?><p> <br/>
-								<p>Bookfresh Available Short Codes</p>
+								<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?></p>
+								<button type="button" name="unlink_account" id="unlink_account" class="button-primary">Unlink Account</button><br/>
+								<b>Bookfresh Available Short Codes</b>
 								<ul>
 									<li>[bookfresh_widget_large]</li>
 									<li>[bookfresh_widget_small]</li>

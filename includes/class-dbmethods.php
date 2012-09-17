@@ -53,8 +53,9 @@ if (!class_exists('BF_DBMethods')) {
 		/**
 		 * Deletes the option names passed as parameters
 		 */
-		function DeleteOption(){
-			global $wpdb;
+		function DeleteOption($option) {
+		  global $wpdb;
+		  $wpdb->query($wpdb->prepare("DELETE FROM `{$this->OptionsTable}` WHERE `option_name`='%s'", $option));
 		}
 
 		/**

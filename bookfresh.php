@@ -96,6 +96,15 @@ if(!class_exists('BookFresh')){
 			$this->SaveOption('bf_account_settings', $data);
 			die();
 		}
+
+		public function bf_delete(){
+			$nonce = $_POST['bf_nonce'];
+		    if (!wp_verify_nonce( $nonce, 'bf_ajax-nonce' )){
+		        die();
+			}
+			$this->DeleteOption('bf_account_settings');
+			die();
+		}
 	}
 
 	$BFInstance = new Bookfresh();
@@ -107,6 +116,7 @@ if(!class_exists('BookFresh')){
 	//Actions
 	$BFInstance->bf_add_action('init', array($BFInstance, 'load_js'));
 	$BFInstance->bf_add_action('wp_ajax_bf_member', array($BFInstance, 'bf_member'));
+	$BFInstance->bf_add_action('wp_ajax_bf_delete', array($BFInstance, 'bf_delete'));
 	$BFInstance->bf_add_action('admin_menu', array($BFInstance, 'admin_menus'), 10, '');
 
 

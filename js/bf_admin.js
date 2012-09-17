@@ -47,10 +47,24 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $("#unlink_account").click(function(){
+        var data = {
+                action: 'bf_delete',
+                bf_nonce: bf_nonce.nonce
+            };
+        $.post(ajax_script.ajaxurl, data, function(){
+            $("#email, #password").val('');
+        })
+        .success(function() { flash_message('Account details deleted', 'success'); })
+        .error(function() { flash_message('Something went wrong. Please try again', 'error'); })
+    })
+
     var flash_message = function(message, type){
         $("#bf_flash_message").show().fadeIn('slow', function(){
             $(this).empty();
             $(this).append(message);
+            $(this).css('font-size', '14px');
+            $(this).css('padding', '5px 10px');
             if(type == 'success') {
                 $(this).css('background-color', '#FFFBCC');
                 $(this).css('color', '#000');
@@ -58,6 +72,9 @@ jQuery(document).ready(function($) {
                 $(this).css('background-color', '#DD4B39');
                 $(this).css('color', '#ffffff');
             }
-        }).fadeOut(3000);;
+        })
+        .fadeOut(5000, function(){
+             location.reload();
+        });
     }
 });
