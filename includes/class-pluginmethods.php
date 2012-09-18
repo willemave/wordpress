@@ -92,7 +92,7 @@ if (!class_exists('BF_PluginMethods')) {
 							<div id="bf-shortcodes">
 								<p id="service_id"><b>BookFresh Service ID:</b> <?php echo $data['service_id']; ?></p>
 								<p id="bf_email"><b>BookFresh Email:</b> <?php echo $data['email']; ?></p>
-								<button type="button" name="unlink_account" id="unlink_account" class="button-primary">Unlink Account</button><br/>
+								<button type="button" name="unlink_account" id="unlink_account" class="button-primary">Unlink Account</button><br/><br/><br/>
 								<b>Bookfresh Available Short Codes</b>
 								<ul>
 									<li>[bookfresh_widget_large]</li>
@@ -114,7 +114,7 @@ if (!class_exists('BF_PluginMethods')) {
 						</div>
 						<div id="mini_widget" class="widgets_info">
 							<span>[bookfresh_widget_small]</span>
-							<img src="<?php echo $this->bf_plugins_url('/images/mini_widget.png', dirname(__FILE__)); ?>" alt="bookfresh_widget_small"/>
+							<img height="150" src="<?php echo $this->bf_plugins_url('/images/mini_widget.png', dirname(__FILE__)); ?>" alt="bookfresh_widget_small"/>
 						</div>
 						<div id="button_widget" class="widgets_info">
 							<span>[bookfresh_booknow_button]</span>
