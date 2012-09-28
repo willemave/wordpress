@@ -1,11 +1,11 @@
 === Plugin Name ===
 Contributors: willemave
 Donate link: http://www.bookfesh.com
-Requires at least: 2.0.2
-Tested up to: 2.1
+Requires at least: 2.5
+Tested up to: 3.4
 License: GPLv2, Commercial
 License URI: http://www.bookfresh.com/security/terms-of-use
-Stable tag: trunk
+Stable tag: 1.0
 
 Book appointments directly from your WordPress site! Use BookFresh to manage your business, reduce no shows, synchronize external calendars and more!
 
