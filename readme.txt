@@ -71,7 +71,11 @@ Answer to foo bar dilemma.
 
 == Screenshots ==
 
-
+1. Using WordPress ShortCodes [bookfresh_large_widget] clients will then be able to select a service to book online directly on your site!
+2. After selecting a service, clients select an available date and time for the appointment - BookFresh will automatically block out times when you're already book.
+3. Within the BookFresh console you can add all of your services/staff, classes, and resources
+4. Create and manage all your staff and their preferences
+5. Once the client requests an appointment, you'll get an email alerting you of the request, and you can accept or decline the request
 
 == Changelog ==
 
