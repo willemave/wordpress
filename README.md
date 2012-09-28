@@ -1,6 +1,6 @@
 BookFresh Wordpress Plugin
 ==========================
-BookFresh is the premier online schedule and appointment solution!
+BookFresh is the premier online schedule and appointment solution!  Please register at [http://www.bookfresh.com/](http://www.bookfresh.com/)
 
 Installation
 ------------
