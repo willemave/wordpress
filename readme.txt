@@ -13,7 +13,7 @@ Book appointments directly from your WordPress site! Use BookFresh to manage you
 
 ### BookFresh is a powerful online scheduling software ###
 
-BookFresh is a FREE online scheduling Wordpress plugin that’s used by over 100,000 businesses who offer over 100 different kinds of services in many different countries. With BookFresh, your customers will have everything they need to book the right service with the right person at the right time – all online!
+BookFresh is a FREE online scheduling Wordpress plugin that’s used by over 100,000 businesses who offer over 100 different kinds of services in many different countries. With BookFresh, your customers will have everything they need to book the right service with the right person at the right time.  We use simple Short Codes to enable scheduling on any page in your WordPress site!
 
 ### BookFresh is easy and you could be booking new business in minutes! ###
 
