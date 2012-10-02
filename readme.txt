@@ -61,13 +61,9 @@ They use BookFresh to schedule all kinds of appointments from services sessions 
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Any questions? =
 
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
+Please contact us at <mailto:user@example.com>
 
 == Screenshots ==
 
@@ -78,6 +74,9 @@ Answer to foo bar dilemma.
 5. Once the client requests an appointment, you'll get an email alerting you of the request, and you can accept or decline the request
 
 == Changelog ==
+
+= 1.1 =
+* Updated FAQ
 
 = 1.0 =
 * Intial Version
