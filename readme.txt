@@ -75,6 +75,9 @@ Please contact us at <mailto:user@example.com>
 
 == Changelog ==
 
+= 1.2 =
+* Updated plugin page to iframe login and settings pages
+
 = 1.1 =
 * Updated FAQ
 
