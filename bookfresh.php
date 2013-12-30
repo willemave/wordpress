@@ -23,7 +23,7 @@ if(!class_exists('BookFresh')){
 
 		//Builds the admin menus
 		public function admin_menus() {
-			$page = add_menu_page('BookFresh', 'BookFresh', 8, 'bookfresh', array($this, 'create_menus'), plugins_url('/images/logo-icon.png', __FILE__));
+			$page = add_menu_page('BookFresh', 'BookFresh', 'activate_plugins', 'bookfresh', array($this, 'create_menus'), plugins_url('/images/logo-icon.png', __FILE__));
 			add_action('admin_print_styles-' . $page, array($this, 'load_admin_styles'), 10, '');
 			add_action('admin_print_scripts-' . $page, array($this, 'load_admin_scripts'), 10, '');
 		}
